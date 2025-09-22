@@ -1,0 +1,44 @@
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    volumes:
+      - mongo_data:/data/db
+    networks: [appnet]
+
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    restart: unless-stopped
+    environment:
+      PORT: 4000
+      MONGO_URL: mongodb://mongo:27017/projeto1
+      JWT_ACCESS_SECRET: ${JWT_ACCESS_SECRET:?set in .env}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:?set in .env}
+      CORS_ORIGIN: http://web:3000
+      NODE_ENV: production
+    depends_on: [mongo]
+    ports:
+      - "4000:4000"
+    networks: [appnet]
+
+  web:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.web
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_API_URL: http://api:4000
+    depends_on: [api]
+    ports:
+      - "3000:3000"
+    networks: [appnet]
+
+volumes:
+  mongo_data:
+
+networks:
+  appnet:
+    driver: bridge

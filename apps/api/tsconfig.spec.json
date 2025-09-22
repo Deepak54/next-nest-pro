@@ -1,0 +1,19 @@
+import { Config } from 'jest';
+
+const config: Config = {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  rootDir: './src',
+  moduleFileExtensions: ['js', 'json', 'ts'],
+  testRegex: '.*\\.spec\\.ts$',
+  transform: {
+    '^.+\\.(t|j)s$': 'ts-jest'
+  },
+  globals: {
+    'ts-jest': {
+      tsconfig: 'tsconfig.spec.json'
+    }
+  }
+};
+
+export default config;

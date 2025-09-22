@@ -1,0 +1,32 @@
+FROM node:20-alpine AS base
+ENV PNPM_HOME=/root/.local/share/pnpm
+ENV PATH=$PNPM_HOME:$PATH
+RUN corepack enable
+
+WORKDIR /app
+
+# Instala dependências no contexto de monorepo
+COPY pnpm-workspace.yaml turbo.json package.json ./
+COPY apps/api/package.json apps/api/package.json
+
+RUN pnpm install --frozen-lockfile
+
+# Copia o resto do repo
+COPY . .
+
+# Build apenas da API
+RUN pnpm --filter ./apps/api build
+
+# Runtime enxuto
+FROM node:20-alpine AS runtime
+WORKDIR /app
+ENV NODE_ENV=production
+ENV PORT=4000
+
+# Copia apenas o necessário para rodar a API
+COPY --from=base /app/apps/api/dist ./apps/api/dist
+COPY --from=base /app/apps/api/package.json ./apps/api/package.json
+COPY --from=base /app/node_modules ./node_modules
+
+EXPOSE 4000
+CMD ["node", "apps/api/dist/main.js"]
